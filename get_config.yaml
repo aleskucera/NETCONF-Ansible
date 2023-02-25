@@ -1,0 +1,33 @@
+---
+- hosts: all
+  connection: ansible.netcommon.netconf
+  tasks:
+    - name: Get Channel Plan
+      ansible.netcommon.netconf_get:
+        display: xml
+        source: running
+        filter: /channel-plan
+      register: channel_plan
+
+    - name: Get Media Channels
+      ansible.netcommon.netconf_get:
+        display: xml
+        source: running
+        filter: /media-channels
+      register: media_channels
+
+    - name: Save Channel Plan
+      copy:
+        dest: "{{ channel_plan_file }}"
+        content: "{{ channel_plan.stdout }}"
+      connection: local
+
+    - name: Save Media Channels
+      copy:
+        dest: "{{ media_channels_file }}"
+        content: "{{ media_channels.stdout }}"
+      connection: local
+
+
+
+

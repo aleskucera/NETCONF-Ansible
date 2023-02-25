@@ -1,0 +1,12 @@
+---
+- hosts: all
+  connection: ansible.netcommon.netconf
+  tasks:
+    - name: Set Media Channels Config
+      ansible.netcommon.netconf_config:
+        target: candidate
+        backup: yes
+        backup_options:
+          filename: "{{ backup_file }}"
+
+        content: "{{ lookup('file', '{{ configuration_file }}') }}"

@@ -1,0 +1,38 @@
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <media-channels xmlns="http://czechlight.cesnet.cz/yang/czechlight-roadm-device">
+        <channel>47.0</channel>
+        <add>
+            <port>E1</port>
+            <attenuation>10.0</attenuation>
+        </add>
+        <drop>
+            <port>E1</port>
+            <attenuation>10.0</attenuation>
+        </drop>
+        <description>Test channel 1</description>
+    </media-channels>
+    <media-channels xmlns="http://czechlight.cesnet.cz/yang/czechlight-roadm-device">
+        <channel>48.0</channel>
+        <add>
+            <port>E2</port>
+            <attenuation>5.0</attenuation>
+        </add>
+        <drop>
+            <port>E2</port>
+            <attenuation>5.0</attenuation>
+        </drop>
+        <description>Test channel 2</description>
+    </media-channels>
+    <media-channels xmlns="http://czechlight.cesnet.cz/yang/czechlight-roadm-device">
+        <channel>46 (100GHz)</channel>
+        <add>
+            <port>E3</port>
+            <attenuation>0.0</attenuation>
+        </add>
+        <drop>
+            <port>E3</port>
+            <attenuation>0.0</attenuation>
+        </drop>
+        <description>Test channel 3</description>
+    </media-channels>
+</config>
