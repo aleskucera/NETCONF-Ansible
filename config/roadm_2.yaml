@@ -1,17 +1,17 @@
 - description: Test channel 1
   leaf_port: E1
   attenuation: 10.0
-  frequency_center: 19.47
-  frequency_span: 5
+  frequency_center: 194.7
+  frequency_span: 50
 
 - description: Test channel 2
   leaf_port: E2
   attenuation: 5.0
-  frequency_center: 19.48
-  frequency_span: 5
+  frequency_center: 194.8
+  frequency_span: 50
 
 - description: Test channel 3
   leaf_port: E3
   attenuation: 0.0
-  frequency_center: 19.46
-  frequency_span: 10
+  frequency_center: 194.6
+  frequency_span: 100

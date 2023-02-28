@@ -1,0 +1,13 @@
+- name: roadm_1
+  ip_address: 10.0.154.97
+  username: dwdm
+  password: dwdm
+  mode: merge
+  validate: true
+
+- name: roadm_2
+  ip_address: 10.0.154.94
+  username: dwdm
+  password: dwdm
+  mode: replace
+  validate: true

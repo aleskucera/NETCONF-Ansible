@@ -1,0 +1,24 @@
+- description: Test channel 1
+  leaf_port: E1
+  attenuation: 10.0
+  frequency_center: 194.7 # THz
+  frequency_span: 50  # GHz
+
+- description: Test channel 2
+  leaf_port: E2
+  attenuation: 5.0
+  frequency_center: 194.8 # THz
+  frequency_span: 50 # GHz
+
+- description: Test channel 3
+  leaf_port: E3
+  attenuation: 0.0
+  frequency_center: 194.6 # THz
+  frequency_span: 100 # GHz
+
+- description: Changed channel 4
+  leaf_port: E2
+  attenuation: 10.0
+  frequency_span: 50.0  # GHz
+  frequency_center: 195.4 # THz
+
