@@ -1,0 +1,3 @@
+xmltodict~=0.13.0
+ruamel.yaml~=0.17.21
+ansible~=6.3.0
