@@ -12,13 +12,18 @@ def main():
     print('\t CzechLight ROADM Configuration Script')
     print('==================================================\n')
 
-    devices = yaml.load(open('config/devices.yaml', 'r').read())
-    inventory_file = os.path.join(os.getcwd(), 'playbooks', 'inventory.yaml')
-    create_inventory(devices, inventory_file)
-
     # Set host_key_checking to False
     d = dict(os.environ)
     d['ANSIBLE_HOST_KEY_CHECKING'] = 'False'
+
+    # Create necessary directories
+    os.makedirs('data', exist_ok=True)
+    os.makedirs('backup', exist_ok=True)
+    os.makedirs('checkup', exist_ok=True)
+
+    devices = yaml.load(open('config/devices.yaml', 'r').read())
+    inventory_file = os.path.join(os.getcwd(), 'playbooks', 'inventory.yaml')
+    create_inventory(devices, inventory_file)
 
     for device in devices:
         print(f"\nINFO: Processing device: {device['name']} ({device['ip_address']})")

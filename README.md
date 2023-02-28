@@ -77,6 +77,27 @@ To run the script, you need to run the following command:
 
     python main.py
 
+The following steps will be performed:
 
+1. The script will check the configuration files in the `config` folder and will create the Ansible inventory
+   file `playbooks/inventory.yaml` for Ansible.
+2. The current configuration will be loaded from the ROADM devices and saved in the `data` folder. The configuration
+   is loaded via the NETCONF protocol using Ansible playbook `playbooks/get_config.yaml`.
+3. If the variable `validate` is set to `true` in the configuration file for the ROADM device, the script will
+   compare the current configuration with the new configuration and visualize the changes in the `checkup` folder. More
+   about the checkup files can be found in the [Checkup](#checkup) section. Then the user will be asked to confirm
+   the changes.
+4. If the variable `validate` is set to `false` or the user confirms the changes, the script will apply the new
+   configuration to the ROADM devices via the NETCONF protocol using Ansible playbook `playbooks/set_config.yaml`.
+
+## Checkup
+
+The script will create a summary of the changes in the `checkup` folder. The summary will be created for each
+device and will contain the following files:
+
+- **added_channels.yaml**: The channels that will be added to the ROADM device.
+- **removed_channels.yaml**: The channels that will be removed from the ROADM device.
+- **changed_channels.yaml**: The channels that will be changed on the ROADM device.
+- **final_channels.yaml**: The final configuration of the ROADM device.
 
 
