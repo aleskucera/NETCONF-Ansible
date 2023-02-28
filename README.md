@@ -92,8 +92,8 @@ The following steps will be performed:
 
 ## Checkup
 
-The script will create a summary of the changes in the `checkup` folder. The summary will be created for each
-device and will contain the following files:
+The script will create a summary of the changes in the `checkup` folder to visualize important information about
+the differences between the current configuration and the new configuration. The following files will be created:
 
 - **added_channels.yaml**: The channels that will be added to the ROADM device.
 - **removed_channels.yaml**: The channels that will be removed from the ROADM device.
