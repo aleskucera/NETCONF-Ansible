@@ -10,11 +10,11 @@ with Python 3.10.
 
 You can install the requirements with pip by running the following command:
 
-    pip install -r requirements.txt
+    pip install -r environment/requirements.txt
 
 or you can create an Anaconda environment with the following command:
 
-    conda env create -f environment.yml
+    conda env create -f environment/environment.yaml
 
 ## Configuration
 
